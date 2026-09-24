@@ -1105,6 +1105,11 @@ footer{background:var(--navy);border-top:1px solid rgba(184,151,74,.12);padding:
 .live-hint{font-size:.72rem;color:rgba(250,247,242,.6);margin:.6rem 0 0;font-weight:300;line-height:1.55}
 .live-yt{display:inline-block;margin-top:.7rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#d4b06a;text-decoration:none}
 .live-yt:hover{text-decoration:underline}
+.hero-recap{background:rgba(184,151,74,.14);border-color:rgba(184,151,74,.6)}
+.hero-recap:hover{background:rgba(184,151,74,.26)}
+.hero-recap .live-txt strong{color:#d4b06a}
+.recap-play{width:0;height:0;flex-shrink:0;border-left:9px solid #d4b06a;border-top:6px solid transparent;border-bottom:6px solid transparent}
+.recap-kicker .recap-play{border-left-color:#0d1f3c}
 @media(max-width:600px){.hero-live{padding:.55rem .8rem;gap:.5rem;margin:.8rem 0 .2rem}.hero-live .live-txt{font-size:.65rem}.hero-live .live-cta{font-size:.65rem}}
 </style>
 </head>
@@ -1132,7 +1137,7 @@ footer{background:var(--navy);border-top:1px solid rgba(184,151,74,.12);padding:
   <div class="hero-portrait-mobile"><span class="photo-credit-mobile">© L’Osservatore Romano</span></div>
   <div class="hero-l">
     <div class="hero-badge"><div class="hero-badge-dot"></div><span>Centro Ratzinger · Universidad de La Sabana</span></div>
-    <a href="#video-destacado" class="hero-live"><span class="live-dot"></span><span class="live-txt"><strong>En vivo ahora</strong> · Transmisión del Congreso</span><span class="live-cta">Ver transmisión &rarr;</span></a>
+    <a href="#video-destacado" class="hero-live hero-recap"><span class="recap-play"></span><span class="live-txt"><strong>Revive el Día 1</strong> · Grabación del Congreso</span><span class="live-cta">Ver ahora &rarr;</span></a>
     <div class="hero-title-row" style="display:flex;align-items:flex-start;gap:1.5rem">
     <h1 class="hero-h1">Congreso<br><em>Centenario</em><br>Ratzinger</h1>
     <img src="assets/img/img-03.webp" class="fond100-dk" alt="Centenario Ratzinger" style="height:180px;object-fit:contain;align-self:center;margin-top:0">
@@ -1178,19 +1183,19 @@ footer{background:var(--navy);border-top:1px solid rgba(184,151,74,.12);padding:
     </div>
   </div></section>
 
-<!-- TRANSMISIÓN EN VIVO -->
+<!-- VIDEO DESTACADO · RECAP -->
 <section id="video-destacado" style="background:var(--gold,#b8974a);padding:1.6rem 8vw 1.9rem">
   <div style="max-width:900px;margin:0 auto">
-    <span class="live-kicker"><span class="live-dot"></span>En vivo · Congreso Centenario Ratzinger</span>
+    <span class="live-kicker recap-kicker"><span class="recap-play"></span>Recap · Día 1 del Congreso</span>
     <div style="background:rgba(13,31,60,.85);border:1px solid rgba(13,31,60,.3);overflow:hidden">
       <div class="live-frame">
         <iframe src="https://www.youtube.com/embed/NfROrKAZW8Y?autoplay=1&amp;mute=1&amp;playsinline=1&amp;rel=0"
-                title="Transmisión en vivo del Congreso Centenario Ratzinger"
+                title="Recap del Día 1 del Congreso Centenario Ratzinger"
                 allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                 allowfullscreen loading="eager"></iframe>
       </div>
       <div style="padding:1rem 1.35rem 1.2rem">
-        <div style="font-size:.63rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#ff6b61;margin-bottom:.35rem">Transmisión en directo</div>
+        <div style="font-size:.63rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#d4b06a;margin-bottom:.35rem">Recap · Día 1</div>
         <div style="font-family:var(--serif),Georgia,serif;font-size:1.05rem;color:#faf7f2;line-height:1.3">Auditorio David Mejía Velilla · Universidad de La Sabana</div>
         <p class="live-hint">Activa el audio con el control de volumen del reproductor.</p>
         <a class="live-yt" href="https://www.youtube.com/live/NfROrKAZW8Y" target="_blank" rel="noopener">Ver en YouTube &rarr;</a>
