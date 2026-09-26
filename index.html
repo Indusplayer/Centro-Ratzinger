@@ -1112,6 +1112,41 @@ footer{background:var(--navy);border-top:1px solid rgba(184,151,74,.12);padding:
 .recap-kicker .recap-play{border-left-color:#0d1f3c}
 @media(max-width:600px){.hero-live{padding:.55rem .8rem;gap:.5rem;margin:.8rem 0 .2rem}.hero-live .live-txt{font-size:.65rem}.hero-live .live-cta{font-size:.65rem}}
 </style>
+<style>
+/* --- Frases del Congreso (slider con fondo adaptativo) --- */
+#frases{padding:4.5rem 8vw 3.2rem;transition:background-color .65s ease}
+.frases-head{text-align:center;max-width:660px;margin:0 auto 2.4rem}
+.frases-sub{font-size:.9rem;font-weight:300;line-height:1.7;margin:.4rem 0 0;transition:color .65s ease}
+#frases .s-title{transition:color .65s ease}
+.fr-slider{position:relative;display:flex;align-items:center;justify-content:center;gap:1rem}
+.fr-viewport{overflow:hidden;width:100%;max-width:440px}
+.fr-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
+.fr-slide{min-width:100%;flex:0 0 100%}
+.fr-slide img{width:100%;height:auto;display:block}
+.fr-nav{flex-shrink:0;width:46px;height:46px;border-radius:50%;font-size:1.6rem;line-height:1;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s,color .65s ease;background:transparent}
+.fr-caption{text-align:center;margin:1.6rem auto 0;max-width:520px}
+.fr-caption strong{display:block;font-family:var(--serif),Georgia,serif;font-size:1.15rem;font-weight:500;margin-bottom:.25rem;transition:color .65s ease}
+.fr-caption span{display:block;font-size:.82rem;font-weight:300;line-height:1.6;transition:color .65s ease}
+.fr-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.4rem}
+.fr-dot{width:8px;height:8px;border-radius:50%;border:0;padding:0;cursor:pointer;transition:background .25s,transform .25s}
+.fr-dot.activo{transform:scale(1.35)}
+/* tono oscuro */
+#frases[data-tono="dark"] .s-title,#frases[data-tono="dark"] .fr-caption strong{color:var(--cream)}
+#frases[data-tono="dark"] .frases-sub,#frases[data-tono="dark"] .fr-caption span{color:rgba(250,247,242,.62)}
+#frases[data-tono="dark"] .fr-nav{color:var(--cream);border:1px solid rgba(250,247,242,.3)}
+#frases[data-tono="dark"] .fr-nav:hover{background:rgba(184,151,74,.5);border-color:var(--gold)}
+#frases[data-tono="dark"] .fr-dot{background:rgba(250,247,242,.28)}
+#frases[data-tono="dark"] .fr-dot.activo{background:var(--gold)}
+/* tono claro */
+#frases[data-tono="light"] .s-title,#frases[data-tono="light"] .fr-caption strong{color:var(--navy)}
+#frases[data-tono="light"] .frases-sub,#frases[data-tono="light"] .fr-caption span{color:var(--txt-m)}
+#frases[data-tono="light"] .fr-nav{color:var(--navy);border:1px solid rgba(13,31,60,.25)}
+#frases[data-tono="light"] .fr-nav:hover{background:rgba(184,151,74,.28);border-color:var(--gold)}
+#frases[data-tono="light"] .fr-dot{background:rgba(13,31,60,.22)}
+#frases[data-tono="light"] .fr-dot.activo{background:var(--gold)}
+@media(max-width:700px){#frases{padding:3.5rem 5vw 2.6rem}.fr-slider{gap:.3rem}.fr-nav{width:36px;height:36px;font-size:1.25rem}.fr-viewport{max-width:none}}
+@media(prefers-reduced-motion:reduce){#frases,.fr-track,.frases-sub,.fr-caption strong,.fr-caption span{transition:none}}
+</style>
 </head>
 <body>
 
@@ -1459,6 +1494,34 @@ footer{background:var(--navy);border-top:1px solid rgba(184,151,74,.12);padding:
     <div class="cta-actions"><a href="https://forms.office.com/pages/responsepage.aspx?id=MRalrP4ADUmRqxY--HJg7kybJFkYlW1Fk2CtBmp6A39UMzZZT1lYVEo3Wjg5MjUwTlJPME5aSzRNTS4u&origin=lprLink&route=shorturl" target="_blank" class="btn-navy">Solicitar inscripción</a><a href="https://share.google/qlDJYx5UTEn9nfutj" target="_blank" rel="noopener" class="btn-navy btn-donar">Donar al Fondo Pedro María</a></div>
     <p class="cta-nota">Tu aporte sostiene el Congreso y las becas para sacerdotes de la Maestría en Teología. En el formulario de donación selecciona la <strong>opción 3 “Becas Fondo Pedro María”</strong>.</p>
   </div>
+</section>
+
+<!-- PUBLICACIONES DEL CONGRESO -->
+<section id="frases" data-tono="dark" style="background:#0d1f3d">
+  <div class="frases-head">
+    <span class="s-label">Publicaciones del Congreso</span>
+    <h2 class="s-title">Frases del <em>Centenario</em></h2>
+    <p class="frases-sub">Una selección de ideas de las ponencias presentadas durante el Congreso.</p>
+  </div>
+  <div class="fr-slider">
+    <button type="button" class="fr-nav fr-prev" aria-label="Anterior">&#8249;</button>
+    <div class="fr-viewport">
+      <div class="fr-track">
+        <div class="fr-slide" data-bg="#0d1f3d" data-tono="dark" data-nombre="Pablo Blanco Sarto" data-titulo="Fides et ratio. La razón en perspectiva ecuménica según Joseph Ratzinger"><img src="assets/img/img-37.webp" alt="Pablo Blanco Sarto — Fides et ratio. La razón en perspectiva ecuménica según Joseph Ratzinger" loading="eager" decoding="async"></div>
+        <div class="fr-slide" data-bg="#faf6f1" data-tono="light" data-nombre="Padre Bernardo Estrada" data-titulo="Fe e historia en la génesis de los Evangelios. El aporte de Joseph Ratzinger"><img src="assets/img/img-38.webp" alt="Padre Bernardo Estrada — Fe e historia en la génesis de los Evangelios. El aporte de Joseph Ratzinger" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#0d1f3d" data-tono="dark" data-nombre="Cristian Camargo y Gabriela Triana" data-titulo="La Universidad: desafíos y esperanzas. Un diálogo con Joseph Ratzinger y Edith Stein"><img src="assets/img/img-39.webp" alt="Cristian Camargo y Gabriela Triana — La Universidad: desafíos y esperanzas. Un diálogo con Joseph Ratzinger y Edith Stein" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#0d1f3d" data-tono="dark" data-nombre="Daniel Cardó" data-titulo="El lenguaje de nuestra Madre: iglesia y liturgia en Joseph Ratzinger"><img src="assets/img/img-40.webp" alt="Daniel Cardó — El lenguaje de nuestra Madre: iglesia y liturgia en Joseph Ratzinger" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#f9f5f0" data-tono="light" data-nombre="Miguel Romero" data-titulo="Ratzinger y Chesterton: el Dios de la fe, de los filósofos y de los mitos"><img src="assets/img/img-41.webp" alt="Miguel Romero — Ratzinger y Chesterton: el Dios de la fe, de los filósofos y de los mitos" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#0d1f3d" data-tono="dark" data-nombre="Juan de Dios Smith-Senabre" data-titulo="La fragilidad humana en Joseph Ratzinger–Benedicto XVI"><img src="assets/img/img-42.webp" alt="Juan de Dios Smith-Senabre — La fragilidad humana en Joseph Ratzinger–Benedicto XVI" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#f9f5f0" data-tono="light" data-nombre="Rodrigo Polanco" data-titulo="El Espíritu Santo en la historia y en la Iglesia: integración de lo diverso"><img src="assets/img/img-43.webp" alt="Rodrigo Polanco — El Espíritu Santo en la historia y en la Iglesia: integración de lo diverso" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#0d1f3d" data-tono="dark" data-nombre="Mauricio Saavedra" data-titulo="San Agustín en el pensamiento de Joseph Ratzinger"><img src="assets/img/img-44.webp" alt="Mauricio Saavedra — San Agustín en el pensamiento de Joseph Ratzinger" loading="lazy" decoding="async"></div>
+        <div class="fr-slide" data-bg="#f9f5f0" data-tono="light" data-nombre="César Ramírez" data-titulo="Testigos de esperanza en tiempos de incertidumbre"><img src="assets/img/img-45.webp" alt="César Ramírez — Testigos de esperanza en tiempos de incertidumbre" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <button type="button" class="fr-nav fr-next" aria-label="Siguiente">&#8250;</button>
+  </div>
+  <div class="fr-caption"><strong id="fr-nombre">Pablo Blanco Sarto</strong><span id="fr-titulo">Fides et ratio. La razón en perspectiva ecuménica según Joseph Ratzinger</span></div>
+  <div class="fr-dots"><button type="button" class="fr-dot activo" data-i="0" aria-label="Frase 1"></button><button type="button" class="fr-dot" data-i="1" aria-label="Frase 2"></button><button type="button" class="fr-dot" data-i="2" aria-label="Frase 3"></button><button type="button" class="fr-dot" data-i="3" aria-label="Frase 4"></button><button type="button" class="fr-dot" data-i="4" aria-label="Frase 5"></button><button type="button" class="fr-dot" data-i="5" aria-label="Frase 6"></button><button type="button" class="fr-dot" data-i="6" aria-label="Frase 7"></button><button type="button" class="fr-dot" data-i="7" aria-label="Frase 8"></button><button type="button" class="fr-dot" data-i="8" aria-label="Frase 9"></button></div>
 </section>
 
 <!-- SPEAKERS -->
@@ -2010,6 +2073,46 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'||e.key==='Es
   }
   pintar();
   setInterval(pintar, 30000);
+})();
+</script>
+
+<script>
+/* Slider de frases con fondo adaptativo */
+(function(){
+  var sec=document.getElementById('frases'); if(!sec) return;
+  var track=sec.querySelector('.fr-track');
+  var slides=[].slice.call(sec.querySelectorAll('.fr-slide'));
+  var dots=[].slice.call(sec.querySelectorAll('.fr-dot'));
+  var nom=document.getElementById('fr-nombre'), tit=document.getElementById('fr-titulo');
+  if(!track||!slides.length) return;
+  var i=0;
+  function pintar(){
+    var s=slides[i];
+    track.style.transform='translateX('+(-i*100)+'%)';
+    sec.style.backgroundColor=s.getAttribute('data-bg');
+    sec.setAttribute('data-tono', s.getAttribute('data-tono'));
+    if(nom) nom.textContent=s.getAttribute('data-nombre');
+    if(tit) tit.textContent=s.getAttribute('data-titulo');
+    dots.forEach(function(d,n){ d.className='fr-dot'+(n===i?' activo':''); });
+  }
+  function ir(n){ i=(n+slides.length)%slides.length; pintar(); }
+  var prev=sec.querySelector('.fr-prev'), next=sec.querySelector('.fr-next');
+  if(prev) prev.addEventListener('click', function(){ ir(i-1); });
+  if(next) next.addEventListener('click', function(){ ir(i+1); });
+  dots.forEach(function(d,n){ d.addEventListener('click', function(){ ir(n); }); });
+  /* deslizar con el dedo */
+  var x0=null;
+  var vp=sec.querySelector('.fr-viewport');
+  if(vp){
+    vp.addEventListener('touchstart', function(e){ x0=e.touches[0].clientX; }, {passive:true});
+    vp.addEventListener('touchend', function(e){
+      if(x0===null) return;
+      var dx=e.changedTouches[0].clientX-x0;
+      if(Math.abs(dx)>40) ir(i+(dx<0?1:-1));
+      x0=null;
+    }, {passive:true});
+  }
+  pintar();
 })();
 </script>
 </body></html>
